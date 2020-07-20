@@ -1,0 +1,13 @@
+<script>
+    // Addition Quiz
+    let x = Math.round(Math.random() * 10);
+    let y = Math.round(Math.random() * 10);
+    let question = `What's ${x} + ${y} ?`;
+    answer = Number(prompt(question));
+    if (answer === x+y) {
+        document.write("Correct Answer");
+    }
+    else {
+        document.write("Wrong Answer");
+    }
+</script>
