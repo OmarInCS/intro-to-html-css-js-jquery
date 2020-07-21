@@ -1,0 +1,45 @@
+
+
+main {
+    width: 75%;
+    border: 1px solid lightblue;
+    margin: auto;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px lightblue;
+}
+
+h2 {
+    background-color: teal;
+    color: white;
+    padding: 8px;
+}
+
+/* #part-1 {
+    background-color: lightgoldenrodyellow;
+}
+
+#part-2 {
+    background-color: lightgray;
+} */
+
+.group-2 {
+    background-color: lightgrey;
+}
+
+.group-1 {
+    background-color: lightgoldenrodyellow;
+}
+
+/*
+.group-1 li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.trial {
+    color: greenyellow;
+}
+
+h2.trial {
+    background-color: indianred;
+} */
