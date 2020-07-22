@@ -36,3 +36,11 @@ button:hover {
     background-color: lightsalmon;
 }
 
+#bt-check {
+    border-bottom-left-radius: 8px;
+}
+
+#bt-new {
+    border-bottom-right-radius: 8px;
+}
+
