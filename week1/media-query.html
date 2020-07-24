@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        a:hover,
+        a:active {
+            color: blue;
+        }
+
+        .app {
+            font-weight: bold;
+        }
+
+        ol {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.2em;
+        }
+
+        section {
+            float: left;
+            padding: 8px;
+            width: 25%;   
+        }
+
+        article {
+            background-color: lightblue;
+            padding-bottom: 8px;
+        }
+
+        article>h2 {
+            background-color: lightsalmon;
+            padding: 8px;
+        }
+
+        /* // Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) {
+            section {
+                width: 100%;
+                font-size: 0.8em;
+            }
+        }
+
+        /* // Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            section {
+                width: 50%;
+                font-size: 0.8em;
+            }
+        }
+
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            section {
+                width: 50%;
+            }
+        }
+
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {}
+
+        /* // Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {}
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Intro. to HTML, CSS, JavaScript and jQuery</h1>
+        <hr>
+        <section>
+            <article>
+                <h2>Module: Intro. to CSS and HTML</h2>
+                <ol>
+                    <li>Course Introduction & Environment Setup</li>
+                    <li>Basic HTML Document Structure</li>
+                    <li>HTML Content Models</li>
+                    <li>Lists, Images and Links</li>
+                    <li>Anatomy of a CSS Rule</li>
+                    <li>Element, Class, and ID Selectors</li>
+                    <li>Combining Selectors</li>
+                    <li>Pseudo-Class Selectors</li>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Module: JS Essentials</h2>
+                <ol>
+                    <li>Variables & Datatypes</li>
+                    <li>Input/Alert Dialogs</li>
+                    <li>Conditionals</li>
+                    <li>Loops</li>
+                    <li>Functions and Scope</li>
+                    <li>Handling Events</li>
+                    <li>DOM Manipulation</li>
+                    <li class="app">Addition Quiz App.</li>
+                    <li class="app">Guess Game App.</li>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Module: JS Beyond Essentials</h2>
+                <ol>
+                    <li>Strings</li>
+                    <li>Arrays & Objects</li>
+                    <li>Regular Expressions</li>
+                    <li class="app">Validation Apps.</li>
+                    <li>Local Storage</li>
+                    <li>DOM Manipulation using jQuery</li>
+                    <li>Login Page</li>
+                    <a href="https://omarincs.github.io/JS-GuessWord/after/">
+                        <li class="app">Guess Words App.</li>
+                    </a>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Module: jQuery and Animation</h2>
+                <ol>
+                    <li>Animate Login Page</li>
+                    <li>Animate Guess Words App.</li>
+                    <li>Progress Bar</li>
+                    <a href="https://www.cisco.com">
+                        <li>Mimic Cisco Website Animation</li>
+                    </a>
+                    <a href="https://www.absher.sa">
+                        <li>Mimic Absher Welcome Page</li>
+                    </a>
+                    <a href="https://www.amazon.com">
+                        <li>Mimic Amazon Sliding Banner</li>
+                    </a>
+                </ol>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
