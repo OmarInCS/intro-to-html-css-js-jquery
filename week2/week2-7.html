@@ -1,0 +1,19 @@
+<script>
+    var score = 0;
+    let x = Math.round(Math.random() * 10);
+    let y = Math.round(Math.random() * 10);
+    let question = `What's ${x} + ${y} ?`;
+    let answer = Number(prompt(question));
+
+    while (answer === x+y) {
+        score += 1;
+        x = Math.round(Math.random() * 10);
+        y = Math.round(Math.random() * 10);
+        question = `What's ${x} + ${y} ?`;
+        answer = Number(prompt(question));
+    }
+
+    document.write("Game Over!<br>");
+    document.write("Your Score:", score);
+
+</script>
