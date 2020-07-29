@@ -1,0 +1,15 @@
+<script>
+
+    let x = Math.round(Math.random() * 10);
+    let y = Math.round(Math.random() * 10);
+    let answer = Number(prompt(`What's ${x} + ${y} ?`));
+
+    while (answer === x+y) {
+        x = Math.round(Math.random() * 10);
+        y = Math.round(Math.random() * 10);
+        answer = Number(prompt(`What's ${x} + ${y} ?`));
+    }
+
+    document.write("Game Over!!");
+
+</script>

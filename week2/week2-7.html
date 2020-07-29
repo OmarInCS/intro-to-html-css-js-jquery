@@ -1,0 +1,16 @@
+<script>
+
+    let score = 0;
+
+    for (let i = 0; i < 5; i++) {
+        let x = Math.round(Math.random() * 10);
+        let y = Math.round(Math.random() * 10);
+        let answer = Number(prompt(`${i+1}) What's ${x} + ${y} ?`));
+        if (answer === x+y) {
+            score += 1;
+        }
+    }
+
+    document.write("You Score: ", score, " out of 5");
+
+</script>
