@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="week2-9.css">
+    <script src="week2-9.js"></script>
+</head>
+<body onload="startGame();">
+    <div class="box">
+        <h3>Trials: 0</h3>
+    </div>
+    <div class="box">
+        <img id="image" src="../images/think.png" alt="" height="100">
+        <p id="message">Guess a number btw 0-100</p>
+        <input type="text" id="answer">
+        <button id="bt-check" onclick="checkAnswer();">Check Answer</button><!--
+        --><button id="bt-new" onclick="startGame();">Play Again</button>
+    </div>    
+</body>
+</html>
