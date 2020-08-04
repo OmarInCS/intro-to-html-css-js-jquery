@@ -1,0 +1,23 @@
+<script>
+    function getMax(x=0, y=100) {
+        if (x > y) return x;
+        else return y;
+    }
+
+    // let getMax = function (x, y) {
+    //     if (x > y) return x;
+    //     else return y;
+    // }
+    
+    // // ES6
+    // let getMax = (x, y) => {
+    //     if (x > y) return x;
+    //     else return y;
+    // }
+
+    document.write(getMax(15, 17) + "<br>");
+    document.write(getMax() + "<br>");
+    document.write(getMax(13, 5, 15) + "<br>");
+    document.write(getMax(50) + "<br>");
+    // document.write(getMax(y=50) + "<br>");
+</script>

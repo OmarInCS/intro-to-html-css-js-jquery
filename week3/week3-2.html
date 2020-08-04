@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="../week2/week2-9.css">
+<script src="week3-2.js"></script>
+<body onload="displayQuestion();">
+    <div class="box">
+        <h3>Score: 0</h3>
+    </div>
+    <div class="box">
+        <h1 id="question">
+    
+        </h1>
+        <input type="text" id="answer">
+        <p id="message"> </p>
+        <button id="bt-check" >Check Answer</button><!--
+        --><button id="bt-new">New Question</button>
+    </div>    
+</body>
+<script>
+    document.getElementById("bt-check").onclick = checkAnswer;
+    // document.getElementById("bt-new").onclick = displayQuestion;
+    document.getElementById("bt-new").addEventListener("click", displayQuestion);
+</script>
