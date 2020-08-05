@@ -44,11 +44,11 @@ button:hover {
     background-color: lightsalmon;
 }
 
-#bt-check {
+#bt-new {
     border-bottom-left-radius: 8px;
 }
 
-#bt-new {
+#bt-check {
     border-bottom-right-radius: 8px;
 }
 
@@ -75,5 +75,30 @@ button:hover {
     background-color: lightsalmon;
     /* color: white; */
     font-weight: bold;
+}
+
+.history-item, #history-header {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 8px;
+}
+
+.history-item:nth-child(even) {
+    background-color: rgba(144, 238, 144, 0.2);
+}
+
+.history-item > span, #history-header > span {
+    width: 50%;
+}
+
+#history-header {
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+
+#bt-clear {
+    width: 100%;
+    border-radius: 0px 0px 8px 8px;
+    margin-top: 8px;
 }
 
