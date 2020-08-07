@@ -89,6 +89,29 @@
             }
         }
 
+        function isValidMobile() {
+            let mobilePattern = /^05\d{8}$/
+            let inputTag = document.getElementById("mobile");
+            let mobile = inputTag.value;
+            if (mobilePattern.test(mobile)) {
+                inputTag.className = "valid";
+            }
+            else {
+                inputTag.className = "invalid";
+            }
+        }
+
+        function isValidEmail() {
+            let emailPattern = /^\w+@\w+(\.\w+)+$/
+            let inputTag = document.getElementById("email");
+            let email = inputTag.value;
+            if (emailPattern.test(email)) {
+                inputTag.className = "valid";
+            }
+            else {
+                inputTag.className = "invalid";
+            }
+        }
     </script>
 </head>
 <body>
@@ -99,13 +122,13 @@
             Name: <input id="name" class="invalid" type="text" onblur="isValidName();">
         </div>
         <div class="row">
-            Mobile: <input id="mobile" class="invalid" type="text">
+            Mobile: <input id="mobile" class="invalid" type="text" onblur="isValidMobile();">
         </div>
         <div class="row">
             Plate Number: <input id="plate" class="invalid" type="text" onblur="isValidPlate();">
         </div>
         <div class="row">
-            Email: <input id="email" class="invalid" type="email">
+            Email: <input id="email" class="invalid" type="email" onblur="isValidEmail();">
         </div>
         <button>Save</button>
     </main>
