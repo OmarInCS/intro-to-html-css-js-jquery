@@ -13,6 +13,9 @@ function loadData() {
         displaySelectedWord();
         // console.log(wordsList);
     });
+    
+    $("#box").css({height: "0px", opacity: "0"});
+    $("#box").animate({height: "332px", opacity: "1"}, 1000, "linear");
 }
 
 function selectRandomWord() {
@@ -36,9 +39,12 @@ function displaySelectedWord() {
                                 .replace("{{mark}}", c === "?" ? "?" : "")
                                 .replace("{{letter}}", c === "?" ? "" : c)
                                 .replace("{{disabled}}", c === "?" ? "" : "disabled"))
+            
+            $(`.letter-box:nth-child(${i+1})`).css({display: "none"});
+            setTimeout(() => {
+                $(`.letter-box:nth-child(${i+1})`).fadeIn("slow");
+            }, i * 500);
          });
-    
-    
 }
 
 function checkAnswer() {
