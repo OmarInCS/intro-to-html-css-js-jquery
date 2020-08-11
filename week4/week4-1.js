@@ -48,6 +48,7 @@ function showRandomWord() {
 function checkAnswer() {
     let correctWord = wordsList[selectedIndex];
     let userWord = "";
+    
     $(".letter-box").each((i, e) => {
         userWord += e.value;
         if (e.value === correctWord[i]) {
