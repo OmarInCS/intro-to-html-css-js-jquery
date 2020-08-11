@@ -10,6 +10,10 @@
         box-sizing: border-box;
     }
 
+    body {
+        margin: 8px 0px;
+    }
+
     nav {
         display: flex;
         flex-direction: row;
@@ -30,6 +34,18 @@
         position: absolute;
         top: 0px;
         z-index: -2;
+    }
+
+    #img-left {
+        right: 0px;
+    }
+
+    #img-right {
+        left: 0px;
+    }
+
+    #img-center {
+        left: calc(50% - 480px);
     }
 
     .over-shadow {
@@ -69,19 +85,18 @@
             $(this).find(".nav-text").animate({bottom: "24px"}, "fast");
 
             if (next.length && prev.length) {
-                next.animate({width: "16.5%"}, "fast");
-                prev.animate({width: "16.5%"}, "fast");
+                next.animate({width: "-=150px"}, "fast");
+                prev.animate({width: "-=150px"}, "fast");
             }
             else if (next.length) {
-                next.animate({width: "10%"}, "fast");
-                next.next(".nav-tile").animate({width: "23%"}, "fast");
+                next.animate({width: "-=300px"}, "fast");
             }
             else if (prev.length) {
-                prev.animate({width: "10%"}, "fast");
-                prev.prev(".nav-tile").animate({width: "23%"}, "fast");
+                prev.animate({width: "-=300px"}, "fast");
             }
 
-            $(this).animate({width: "66%"}, "fast");
+            $(this).animate({width: "+=300px"}, "fast");
+
         });
 
         $(".nav-tile").mouseleave(function() {
@@ -89,13 +104,14 @@
             $(".over-shadow").animate({opacity: "0"}, "fast");
             $(".nav-text").animate({bottom: "-120px"}, "fast");
         });
+
     });
 </script>
 <body>
     <nav>
         <div class="nav-tile">
             <div class="nav-img">
-                <img src="../images/resiliency.png" alt="">
+                <img id="img-left" src="../images/resiliency.jpg" alt="">
                 <div class="over-shadow"></div>
                 <div class="nav-text">
                     <h1>Enable business resiliency</h1>
@@ -108,7 +124,7 @@
         </div>
         <div class="nav-tile">
             <div class="nav-img">
-                <img src="../images/remote.webp" alt="">
+                <img id="img-center" src="../images/remote.webp" alt="">
                 <div class="over-shadow"></div>
                 <div class="nav-text">
                     <h1>Secure your remote workforce</h1>
@@ -121,7 +137,7 @@
         </div>
         <div class="nav-tile">
             <div class="nav-img">
-                <img src="../images/workplace.webp" alt="">
+                <img id="img-right" src="../images/workplace.webp" alt="">
                 <div class="over-shadow"></div>
                 <div class="nav-text">
                     <h1>Ensure a trusted workplace</h1>
