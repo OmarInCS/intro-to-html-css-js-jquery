@@ -13,6 +13,13 @@ function loadData() {
         showRandomWord();
         // console.log(wordsList);
     });
+
+    $("#box").css("display", "none");
+    $("#box").slideDown("fast");
+    for (let i = 0; i < 5; i++) {
+        $("#box").animate({width: "400px", height: "350px"}, "fast")
+                 .animate({width: "350px", height: "332px"}, "fast");
+    }
 }
 
 function selectRandomWord() {
@@ -60,6 +67,21 @@ function checkAnswer() {
 
     if (userWord === correctWord) {
         $("img").attr("src", "../images/happy.png");
+        // $(".letter-box").animate({top: "-8px"}, "slow")
+        //                 .animate({top: "0px"}, "slow");
+        $(".letter-box").each((i, e) => {
+            setTimeout(() => {
+                $(e).animate({top: "-8px"}, "slow")
+                .animate({top: "0px"}, "slow");
+            }, i * 500);
+        });
+
+        for (let i = userWord.length; i > 0; i--) {
+            setTimeout(() => {
+                $(`.letter-box:nth-child(${i})`).animate({top: "-8px"}, "slow")
+                                                .animate({top: "0px"}, "slow");
+            }, (userWord.length - i) * 500);
+        }
     }
 }
 
