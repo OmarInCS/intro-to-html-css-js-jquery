@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISCO Animation 2</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .header-col {
+            width: 33%;
+            overflow: hidden;
+            height: 532px;
+            position: relative;
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .text-content {
+            position: absolute;
+            bottom: 16px;
+            left: calc(50% - 150px);
+            width: 300px;
+        }
+
+        .text-details {
+            display: none;
+        }
+
+        .header-col > img {
+            position: absolute;
+            width: 960px;
+            height: 532px;
+            left: calc(50% - 480px);
+        }
+
+        .img-bg {
+            background-color: black;
+            opacity: 0;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .text-details > span {
+            background-color: cornflowerblue;
+            padding: 8px;
+            border-radius: 16px;
+        }
+
+    </style>
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <script>
+        function addAnimation() {
+            $(".header-col").mouseenter(function() {
+                let next = $(this).next();
+                let prev = $(this).prev();
+                
+                if (next.length && prev.length) {
+                    next.animate({width: "-=150px"}, "slow");
+                    prev.animate({width: "-=150px"}, "slow");
+                }
+                else if(next.length) {
+                    next.animate({width: "-=300px"}, "slow");
+                }
+                else if(prev.length) {
+                    prev.animate({width: "-=300px"}, "slow");
+                }
+
+                $(this).find(".text-details").slideDown("slow");
+                $(".header-col").not(this).find(".img-bg").animate({opacity: "0.85"}, "slow");
+                $(this).animate({width: "+=300px"}, "slow");
+            });
+
+            $(".header-col").mouseleave(function() {
+                $(this).find(".text-details").slideUp("slow");
+                $(".img-bg").animate({opacity: "0"}, "slow");
+                $(".header-col").animate({width: "33%"}, "slow");
+            });
+        }
+    </script>
+</head>
+<body onload="addAnimation();">
+    <header>
+        <div id="left-img" class="header-col">
+            <img src="../images/resiliency.jpg" alt="">
+            <div class="img-bg"></div>
+            <div class="text-content">
+                <h1>Enable business resiliency</h1>
+                <div class="text-details">
+                    <p>Empower your workforce to work from anywhere, and ensure your workplaces are trusted environments.</p>
+                    <span>Learn more</span>
+                </div>
+            </div>
+        </div>
+        <div id="center-img" class="header-col">
+            <img src="../images/remote.webp" alt="">
+            <div class="img-bg"></div>
+            <div class="text-content">
+                <h1>Secure your remote workforce</h1>
+                <div class="text-details">
+                    <p>Expand enterprise-class operations to the home to optimize remote work for performance, cost, and security.</p>
+                    <span>Explore our solutions</span>
+                </div>
+            </div>
+        </div>
+        <div id="right-img" class="header-col">
+            <img src="../images/workplace.webp" alt="">
+            <div class="img-bg"></div>
+            <div class="text-content">
+                <h1>Ensure a trusted workplace</h1>
+                <div class="text-details">
+                    <p>Facilitate operational consistency across your business while helping to ensure your employees' safety, security, and wellness.</p>
+                    <span>See our solutions</span>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
