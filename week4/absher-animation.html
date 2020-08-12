@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absher Animation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: Mada-Regular;
+            src: url(../fonts/Mada-Regular.ttf);
+        }
+
+        .ar, .en {
+            font-family: Mada-Regular;
+            color: white;
+        }
+
+        html {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(../images/absher/background.jpg);
+            background-position: center;
+            
+        }
+
+        body {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .col {
+            text-align: center;
+            opacity: 0;
+        }
+
+        .flipper {
+            height: 150px;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+
+        .img-front, .img-back {
+            position: absolute;
+            height: 150px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 75%;
+            backface-visibility: hidden;
+        }
+
+        .box:hover .flipper {
+            transform: rotateY(180deg);
+        }
+
+        #col1 .box:hover {
+            background-color: #4682b477;
+        }
+
+        #col2 .box:hover {
+            background-color: #00800055;
+        }
+
+        .img-back {
+            transform: rotateY(180deg);
+        }
+
+
+        #col1 {
+            float: left;
+            margin-left: 32px;
+        }
+
+        #col1  .img-front {
+            background-image: url(../images/absher/business.png);
+        }
+
+        #col1  .img-back {
+            background-image: url(../images/absher/business-hover.png);
+        }
+
+        #col2 {
+            float: right;
+            margin-right: 32px;
+        }
+
+        #col2  .img-front {
+            background-image: url(../images/absher/individual.png);
+        }
+
+        #col2  .img-back {
+            background-image: url(../images/absher/individual-hover.png);
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 250px;
+            margin: auto;
+            background-color: #ffffffcc;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .box > h2 {
+            margin-bottom: 0px;
+            padding: 8px;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+        }
+
+        #col1 > .box > h2 {
+            background-color: steelblue;
+        }
+        
+        #col2 > .box > h2 {
+            background-color: green;
+        }
+
+    </style>
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            let width = Number($(".col").css("width").replace("px", ""));
+            let bodyWidth = Number($("body").css("width").replace("px", ""));
+            console.log(width);
+            console.log(bodyWidth);
+            $("#col1").animate({marginLeft: `${(bodyWidth) / 2 - width}px`, opacity: 1}, "slow");
+            $("#col2").animate({marginRight: `${(bodyWidth) / 2 - width}px`, opacity: 1}, "slow");
+        });
+    </script>
+</head>
+<body>
+    <div id="col1" class="col">
+        <div class="box">
+            <div class="flipper">
+                <div class="img-front">
+
+                </div>
+                <div class="img-back">
+
+                </div>
+            </div>
+            <h2>
+                <div class="ar">أعمال</div>
+                <div class="en">Business</div>
+            </h2>
+        </div>
+        <h2>
+            <div class="ar">خدمات مؤسستك بين يديك</div>
+            <div class="en">Establishments eServices</div>
+        </h2>
+    </div>
+    <div id="col2" class="col">
+        <div class="box">
+            <div class="flipper">
+                <div class="img-front">
+
+                </div>
+                <div class="img-back">
+
+                </div>
+            </div>
+            <h2>
+                <div class="ar">أفراد</div>
+                <div class="en">Individuals</div>
+            </h2>
+        </div>
+        <h2>
+            <div class="ar">خدمات إلكترونية متكاملة</div>
+            <div class="en">Integrated eServices</div>
+        </h2>
+    </div>
+</body>
+</html>
