@@ -37,6 +37,8 @@
         .col {
             text-align: center;
             opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
         }
 
         .flipper {
@@ -71,10 +73,22 @@
             transform: rotateY(180deg);
         }
 
+        @keyframes slide-left {
+            from {margin-right: 32px; opacity: 0;}
+            to {margin-right: calc(50% - 250px); opacity: 1;}
+        }
+
+        @keyframes slide-right {
+            from {margin-left: 32px; opacity: 0;}
+            to {margin-left: calc(50% - 250px); opacity: 1;}
+        }
+
 
         #col1 {
             float: left;
             margin-left: 32px;
+            animation-name: slide-right;
+            
         }
 
         #col1  .img-front {
@@ -88,6 +102,7 @@
         #col2 {
             float: right;
             margin-right: 32px;
+            animation-name: slide-left;
         }
 
         #col2  .img-front {
@@ -127,14 +142,14 @@
     </style>
     <script src="../lib/jquery-3.5.1.min.js"></script>
     <script>
-        $(document).ready(() => {
-            let width = Number($(".col").css("width").replace("px", ""));
-            let bodyWidth = Number($("body").css("width").replace("px", ""));
-            console.log(width);
-            console.log(bodyWidth);
-            $("#col1").animate({marginLeft: `${(bodyWidth) / 2 - width}px`, opacity: 1}, "slow");
-            $("#col2").animate({marginRight: `${(bodyWidth) / 2 - width}px`, opacity: 1}, "slow");
-        });
+        // $(document).ready(() => {
+        //     let width = Number($(".col").css("width").replace("px", ""));
+        //     let bodyWidth = Number($("body").css("width").replace("px", ""));
+        //     console.log(width);
+        //     console.log(bodyWidth);
+        //     $("#col1").animate({marginLeft: `${(bodyWidth) / 2 - width}px`, opacity: 1}, "slow");
+        //     $("#col2").animate({marginRight: `${(bodyWidth) / 2 - width}px`, opacity: 1}, "slow");
+        // });
     </script>
 </head>
 <body>
