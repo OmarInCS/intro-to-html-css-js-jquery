@@ -1,0 +1,50 @@
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.hidden-box {
+    float: left;
+    width: 33.33%;
+    padding: 8px;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 8px;
+    border: 2px solid;
+}
+
+.box-title {
+    border: 2px solid;
+    float: right;
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+    margin-top: -10px;
+    margin-right: -10px;
+    margin-bottom: 8px;
+}
+
+.box > p {
+    clear: right;
+    text-align: justify;
+}
+
+#checken {
+    background-color: lightsalmon;
+}
+
+#sushi {
+    background-color: lightseagreen;
+}
+
+#beef {
+    background-color: lightcoral;
+}
