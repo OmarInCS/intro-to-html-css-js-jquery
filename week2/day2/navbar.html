@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="../../fontawesome-free-5.14.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../fontawesome-free-5.14.0-web/css/solid.min.css">
+    <style>
+        header {
+            background-color: chocolate;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 32px;
+        }
+
+        #navbar-1 a {
+            text-decoration: none;
+            color: cornsilk;
+            padding: 8px;
+        }
+
+        #navbar-1 a:hover {
+            background-color: cornsilk;
+            color: chocolate
+        }
+
+        main {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box {
+            border: 1px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box span {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            padding: 8px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .box:hover {
+            box-shadow: 0px 0px 8px tomato;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <header id="navbar-1">
+        <a href="facebook.com">
+            Menu
+        </a>
+        <a href="facebook.com">
+            About
+        </a>
+        <a href="facebook.com">
+            Awards
+        </a>
+    </header>
+
+    <main>
+        <div class="box">
+            <a href="https://www.w3schools.com/icons/fontawesome_icons_intro.asp">
+                <img src="images/menu-tile.jpg" alt="">
+                <span>Menu</span>
+            </a>
+        </div>
+        <div class="box">
+            <a href="facebook.com">
+                <img src="images/specials-tile.jpg" alt="">
+                <span>Specials</span>
+            </a>
+        </div>
+        <div class="box">
+            <a href="facebook.com">
+                <img src="images/specials-tile.jpg" alt="">
+                <span>Specials</span>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>
