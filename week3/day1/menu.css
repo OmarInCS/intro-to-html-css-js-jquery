@@ -1,0 +1,83 @@
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.hidden-box {
+    float: left;
+    width: 33.33%;
+    padding: 8px;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 8px;
+    border: 2px solid;
+}
+
+.box-title {
+    border: 2px solid;
+    float: right;
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+    margin-top: -10px;
+    margin-right: -10px;
+    margin-bottom: 8px;
+}
+
+.box > p {
+    clear: right;
+    text-align: justify;
+}
+
+#checken {
+    background-color: lightsalmon;
+}
+
+#sushi {
+    background-color: lightseagreen;
+}
+
+#beef {
+    background-color: lightcoral;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .hidden-box {
+        width: 100%;
+    }
+ }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .hidden-box {
+        width: 50%;
+    }
+
+    .hidden-box:nth-child(3) {
+        width: 100%;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+ }
