@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form action="success.html">
+            <div>
+                Username:
+                <input type="text" placeholder="Username">
+            </div>
+            <div>
+                Password:
+                <input type="password" placeholder="Password">
+            </div>
+            <div>
+                Email:
+                <input type="email" placeholder="Email">
+            </div>
+            <div>
+                Age:
+                <input type="number" min="15" max="60" value="25">
+            </div>
+            <div>
+                Date of Birth:
+                <input type="date" name="" id="">
+            </div>
+            <div>
+                Gender:
+                <input type="radio" name="gender" id="male"> <label for="male">Male</label>
+                <input type="radio" name="gender" id="female"> <label for="female">Female</label>
+            </div>
+            <div>
+                Course:
+                <select name="" id="" >
+                    <option value="">Python</option>
+                    <option value="">Java</option>
+                    <option value="">SQL</option>
+                    <option value="">HTML, CSS & JS</option>
+                </select>
+            </div>
+            <div>
+                Course:
+                <input list="course-list">
+                <datalist id="course-list">
+                    <option value="Python">
+                    <option value="Java">
+                    <option value="SQL">
+                    <option value="HTML, CSS & JS">
+                </datalist>
+            </div>
+            <div>
+                Course: <br>
+                <input type="checkbox" name="" id="python" checked> <label for="python">Python</label> <br>
+                <input type="checkbox" name="" id="java"> <label for="java">Java</label> <br>
+                <input type="checkbox" name="" id="SQL"> <label for="SQL">SQL</label> <br>
+                <input type="checkbox" name="" id="frontend"> <label for="frontend">HTML, CSS & JS</label>
+            </div>
+            <div>
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
+    </body>
+</html>
