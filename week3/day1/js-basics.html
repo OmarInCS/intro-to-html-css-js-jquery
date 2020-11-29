@@ -1,0 +1,19 @@
+<script>
+    let salary = Number(prompt("Enter your Salary:"));
+    let annualSalary = salary * 12;
+    // alert("Annual Salary: " + annualSalary);
+    // document.write("<h1>Annual Salary: ", annualSalary, "</h1>");
+    document.write(`<h1>Annual Salary: ${annualSalary}</h1>`);
+    console.log("Annual Salary: ", annualSalary);
+    
+    if (salary > 12000) {
+        document.write("<h1>High Salary</h1>");
+    }
+    else if (salary > 6000) {
+        document.write("<h1>Normal Salary</h1>");
+    }
+    else {
+        document.write("<h1>Low Salary</h1>");
+    }
+    
+</script>

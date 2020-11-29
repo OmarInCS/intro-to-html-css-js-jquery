@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: auto;
+            width: 500px;
+            text-align: center;
+            border-radius: 120px;
+            border: 1px solid darkgray;
+            box-shadow: 0px 0px 8px skyblue;
+            padding: 32px;
+            position: relative;
+        }
+
+        .row {
+            padding: 8px;
+        }
+
+        .row label {
+            width: 100px;
+            text-align: right;
+            display: inline-block;
+        }
+
+        .row input {
+            width: 250px;
+        }
+
+        .button-row {
+            padding-top: 64px;
+            text-align: right;
+        }
+
+        .button-row input {
+            background-color: darkblue;
+            color: white;
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 16px;
+            border: none;
+            width: 250px;
+            text-align: left;
+        }
+
+        .button-row input:hover {
+            background-color: darkred;
+            padding-left: 64px;
+            cursor: pointer;
+        }
+
+        .box img {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            border: 5px solid gray;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="row">
+            <label for="">Email:</label>
+            <input type="text">
+        </div>
+        <div class="row">
+            <label for="">National ID:</label>
+            <input type="text">
+        </div>
+        <div class="button-row">
+            <input type="button" value="Sign In >>">
+        </div>
+        <img src="../../images/Male.png" alt="" width="100px" height="100px">
+    </div>
+</body>
+</html>
