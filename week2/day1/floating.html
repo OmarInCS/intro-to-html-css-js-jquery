@@ -5,40 +5,42 @@
   <meta charset="utf-8">
   <title>Floating Elements</title>
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
     div {
       background-color: #00FFFF;
-      /* overflow: hidden; */
+      overflow: hidden;
     }
 
     p {
-      width: 50px;
+      width: 25%;
       height: 50px;
       border: 1px solid black;
-      /* float: left; */
+      float: left;
     }
 
     #p1 {
       background-color: #A52A2A;
-      float: left;
+      
     }
 
     #p2 {
       background-color: #DEB887;
-      float: left;
     }
 
     #p3 {
       background-color: #5F9EA0;
-      float: right;
     }
 
     #p4 {
       background-color: #FF7F50;
-      float: right;
     }
 
     section {
-        clear: left;
+      clear: both;
     }
 
   </style>
