@@ -1,0 +1,19 @@
+<script>
+    let n = Number(prompt("Enter num. of employees:"));
+    let salaryArray = [];
+
+    for (let i = 0; i < n; i++) {
+        let salary = Number(prompt("Enter salary:"));
+        salaryArray.push(salary);
+    }
+
+    let total = 0;
+    for (let s of salaryArray) {
+        total += s;
+    }
+
+    let avg = total / n;
+
+    document.write(`<h1>Average: ${avg}</h1>`);
+
+</script>
