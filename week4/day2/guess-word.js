@@ -47,27 +47,7 @@ function pickWord() {
     loadLetterBoxs();
 }
 
-/**
- * @returns {Array<String>}
- * return a new list of words that only have words with length btw 4 and 9 inclusive
- */
-function cleanWordsList() {
-    
-}
 
-/**
- * 
- * @param {String} word
- * @returns {String}
- *  
- *  1) convert the word to Array
- *  2) choose two random indixes
- *  3) repalce each with a space
- *  4) convert the Array back to String
- */
-function hideLetters(word="") {
-    
-}
 
 /**
  * for each letter of the global variable selectedWord
@@ -77,7 +57,22 @@ function hideLetters(word="") {
  * 4) if the whole word match change the img in the img tag to 'happy.png'
  */
 function checkGuess() {
+    let correctWord = wordsArray[selectedIndex];
+    let answerBoxs = document.querySelectorAll(".letter-box");
+    let userWord = "";
     
+    for (let i = 0; i < answerBoxs.length; i++) {
+        userWord += answerBoxs[i].value;
+        if (answerBoxs[i].classList.contains("wrong") && answerBoxs[i].value === correctWord[i]) {
+            answerBoxs[i].classList.remove("wrong");
+            answerBoxs[i].classList.add("correct");
+            answerBoxs[i].disabled = true;
+        }
+    }
+
+    if (userWord === correctWord) {
+        document.querySelector("#box > img").src = "../../images/happy.png";
+    }
 }
 
 /**
@@ -86,7 +81,8 @@ function checkGuess() {
  *  3) call the pickWord function to pick new word
  */
 function playAgain() {
-    
+    pickWord();
+    document.querySelector("#box > img").src = "../../images/think.png";
 }
 
 
