@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISCO ANIMATION</title>
+    <script src="../week4/day2/jquery-3.5.1.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            margin: auto;
+            width: 350px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 24px;
+            color: white;
+            padding: 16px;
+        }
+
+        .box img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -2;
+        }
+
+        .box .light-bg {
+            width: 100%;
+            height: 100%;
+            background-color: darkblue;
+            opacity: 0.7;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+            display: none;
+        }
+
+        .box-content {
+            position: absolute;
+            padding: 0px 16px;
+            left: 0px;
+            bottom: 0px;
+            width: 350px;
+        }
+
+        .box-content p {
+            margin-left: -350px;
+            margin-bottom: -30px;
+        }
+
+        .box span {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        function handleMouseOverBox(currentBox) {
+            $(currentBox).find("img").animate({"left": "-16px"}, "fast");
+            $(currentBox).find(".light-bg").fadeIn("fast");
+            $(currentBox).find(".box-content p").animate({"margin-left": "0px", "margin-bottom": "16px"}, "fast");
+        }
+
+        function handleMouseOutBox(currentBox) {
+            $(currentBox).find("img").animate({"left": "0px"}, "fast");
+            $(currentBox).find(".light-bg").fadeOut("fast");
+            $(currentBox).find(".box-content p").animate({"margin-left": "-350px", "margin-bottom": "-30px"}, "fast");
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div class="box" onmouseover="handleMouseOverBox(this);" onmouseout="handleMouseOutBox(this);">
+            <img src="../images/podcast.jpg" alt="">
+            <div class="light-bg"></div>
+            <span>Podcast</span>
+            <div class="box-content">
+                <h2>Empowering secure remote work</h2>
+                <p>Hear how an entire workforce migrated to work remotely in just 24 hours with Cisco VDI.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
