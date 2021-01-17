@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Register Form</title>
+        <style>
+            input:not([type="checkbox"]):not([type="radio"]) {
+                font-size: 18px;
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Register in a Course</h1>
+        <form action="">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" required minlength="3"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" required minlength="8"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" id="g-male"> <label for="g-male">Male</label>
+                        <input type="radio" name="gender" id="g-female"> <label for="g-female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Courses:</td>
+                    <td>
+                        <input type="checkbox"> Java
+                        <input type="checkbox"> Python
+                        <input type="checkbox"> C#
+                        <input type="checkbox"> HTML, CSS & JS
+                    </td>
+                </tr>
+                <tr>
+                    <td>Courses:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="C#">C#</option>
+                            <option value="HTML, CSS & JS">HTML, CSS & JS</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Suggest Course:</td>
+                    <td>
+                        <input type="text" list="courses-list">
+                        <datalist id="courses-list">
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="C#">C#</option>
+                            <option value="HTML, CSS & JS">HTML, CSS & JS</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deposit:</td>
+                    <td><input type="number" value="250" min="250" max="2500"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Register"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
