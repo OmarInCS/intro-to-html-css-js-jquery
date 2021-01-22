@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Modules</title>
+        <style>
+            body {
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                
+            }
+
+            .img-cell {
+                text-align: center;
+            }
+
+            .red-group {
+                color: darkred;
+                
+            }
+
+            .red-group:hover {
+                color: darkred;
+                text-shadow: 0px 0px 8px black;
+                
+            }
+
+            /* .content-cell > span {
+                color: darkred;
+            }
+
+            .content-cell span {
+                color: darkred;
+            } */
+
+            .box {
+                width: 75%;
+                border: 1px solid gray;
+                box-shadow: 0px 0px 8px lightblue;
+                padding: 16px;
+                border-radius: 16px;
+                margin:auto;
+                background-image: url(../images/logo.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+
+            .gap-cell {
+                width: 50px;
+            }
+
+            button {
+                padding: 8px;
+                border-radius: 32px;
+                background-color: skyblue;
+                border: 1px solid lightgrey;
+                width: 150px;
+            }
+
+            button:hover {
+                background-color: lightcoral;
+                cursor: pointer;
+            }
+
+            .buttons-cell {
+                text-align: right;
+            }
+
+            .content-cell {
+                height: 35px;
+                border-bottom: 1px dotted lightgrey;
+            }
+
+            /* tr:nth-child(even) {
+                background-color: lightcoral;
+            } */
+
+            /* tr:nth-child(2) {
+                box-shadow: 0px 0px 4px black;
+            } */
+
+
+            div table {
+                background-color: lightcoral;
+            }
+
+            table {
+                background-color: lightblue;
+            }
+
+           
+            
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <table width="100%">
+                <tr>
+                    <td rowspan="5" class="img-cell">
+                        <img src="../../images/documents.png" alt="" height="150px">
+                    </td>
+                    <td colspan="2" class="red-group">
+                        <h2>My Modules</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gap-cell"></td>
+                    <td class="content-cell">
+                        Big Data Essentials <span class="red-group">(Remove)</span>
+                        <div>
+                            <span>(Add More)</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gap-cell"></td>
+                    <td class="content-cell">
+                        Web Design <span class="red-group">(Remove)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gap-cell"></td>
+                    <td class="content-cell">
+                        Web Developement <span class="red-group">(Remove)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gap-cell"></td>
+                    <td class="buttons-cell">
+                        <button>Apply for Modules</button>
+                        <button>Download Pledge</button>
+                    </td>
+                </tr>
+            </table>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eos quisquam totam corporis ipsa nesciunt tempore, dolore perspiciatis assumenda eius magnam ea iusto culpa deleniti voluptatem, cumque autem, praesentium architecto!</span>
+        </div>
+    </body>
+</html>
