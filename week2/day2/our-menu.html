@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Our Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .outer-box {
+                /* border: 1px solid black; */
+                width: 33.33%;
+                float: left;
+                padding: 16px;
+            }
+
+            .inner-box {
+                border: 2px solid black;
+                padding: 16px;
+                background-color: lightblue;
+            }
+
+            .title-box {
+                border: 2px solid black;
+                padding: 16px;
+                font-size: 120%;
+                font-weight: bold;
+                float: right;
+                margin-top: -18px;
+                margin-right: -18px;
+                width: 150px;
+                text-align: center;
+            }
+
+            .inner-box > p {
+                clear: both;
+                margin-top: 64px;
+            }
+
+            #chicken {
+                background-color: lightsalmon;
+            }
+
+            #sushi {
+                background-color: lightgreen;
+            }
+
+            #beef {
+                background-color: lightgrey;
+            }
+
+
+            /* // Extra small devices (portrait phones, less than 576px) */
+            @media (max-width: 575.98px) { 
+                .outer-box {
+                    width: 100%;
+                }
+             }
+
+            /* // Small devices (landscape phones, 576px and up) */
+            @media (min-width: 576px) and (max-width: 767.98px) { 
+               
+                .outer-box {
+                    width: 100%;
+                }
+             }
+
+            /* // Medium devices (tablets, 768px and up) */
+            @media (min-width: 768px) and (max-width: 991.98px) { 
+                .outer-box {
+                    width: 50%;
+                }
+
+                .outer-box:last-child {
+                    width: 100%;
+                }
+             }
+
+            /* // Large devices (desktops, 992px and up) */
+            @media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+            /* // Extra large devices (large desktops, 1200px and up) */
+            @media (min-width: 1200px) {  }
+
+            @media print { 
+                .outer-box {
+                    width: 100%;
+                }
+             }
+        </style>
+    </head>
+    <body>
+        <h1>Our Menu</h1>
+        <div class="outer-box">
+            <div class="inner-box">
+                <div class="title-box" id="chicken">
+                    Chicken
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil recusandae dolores impedit magnam ipsam eveniet molestias, eius adipisci eum praesentium amet neque similique natus, rerum aut aliquam sequi quaerat.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, non et perspiciatis quas pariatur id impedit sed, laudantium fugit qui, quo at voluptatem quasi rerum! Dolor nesciunt nihil beatae dolorum?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore optio tempore reiciendis voluptatum. Mollitia quidem architecto nemo libero veritatis qui iste ex est ut, voluptate, eum asperiores hic obcaecati adipisci?
+                </p>
+            </div>
+        </div>
+        <div class="outer-box">
+            <div class="inner-box">
+                <div class="title-box" id="sushi">
+                    Sushi
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil recusandae dolores impedit magnam ipsam eveniet molestias, eius adipisci eum praesentium amet neque similique natus, rerum aut aliquam sequi quaerat.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, non et perspiciatis quas pariatur id impedit sed, laudantium fugit qui, quo at voluptatem quasi rerum! Dolor nesciunt nihil beatae dolorum?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore optio tempore reiciendis voluptatum. Mollitia quidem architecto nemo libero veritatis qui iste ex est ut, voluptate, eum asperiores hic obcaecati adipisci?
+                </p>
+            </div>
+        </div>
+        <div class="outer-box">
+            <div class="inner-box">
+                <div class="title-box" id="beef">
+                    Beef
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil recusandae dolores impedit magnam ipsam eveniet molestias, eius adipisci eum praesentium amet neque similique natus, rerum aut aliquam sequi quaerat.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, non et perspiciatis quas pariatur id impedit sed, laudantium fugit qui, quo at voluptatem quasi rerum! Dolor nesciunt nihil beatae dolorum?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore optio tempore reiciendis voluptatum. Mollitia quidem architecto nemo libero veritatis qui iste ex est ut, voluptate, eum asperiores hic obcaecati adipisci?
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

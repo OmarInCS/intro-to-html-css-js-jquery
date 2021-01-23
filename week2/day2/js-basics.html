@@ -1,0 +1,19 @@
+<script>
+    let salary = Number(prompt("Enter your monthly salary:"));
+    let annualSalary = salary * 12;
+    // console.log("Annual Salary is:", annualSalary, "SAR");
+    // document.write("<h1>Annual Salary is: ", annualSalary, " SAR</h1>");
+    // document.write("<h1>Annual Salary is: " + annualSalary + " SAR</h1>");
+    document.write(`<h1>Annual Salary is: ${annualSalary} SAR</h1>`);
+
+    if (salary > 12000) {
+        document.write("<h1>High Salary</h1>");
+    }
+    else if (salary > 6000){
+        document.write("<h1>Normal Salary</h1>");
+    }
+    else {
+        document.write("<h1>Low Salary</h1>");
+    }
+    
+</script>
