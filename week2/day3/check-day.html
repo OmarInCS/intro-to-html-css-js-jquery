@@ -1,0 +1,36 @@
+<script>
+    let day = parseInt(prompt("Enter a day number: "));
+    if (day == 7 || day >= 1 && day <= 4) {
+        document.write("<h1>Work-day</h1>");
+    }
+    else if (day == 5 || day == 6) {
+        document.write("<h1>Off-day</h1>");
+    }
+    else {
+        document.write("<h1>Invalid</h1>");
+    }
+
+    switch (day) {
+        case 1:
+            document.write("<h1>Sunday</h1>");
+            break;
+        case 2:
+            document.write("<h1>Monday</h1>");
+            break;
+        case 3:
+            document.write("<h1>Tuesday</h1>");
+            break;
+        case 4:
+            document.write("<h1>Wednesday</h1>");
+            break;
+        case 5:
+            document.write("<h1>Thursday</h1>");
+            break;
+        case 6:
+            document.write("<h1>Friday</h1>");
+            break;
+        case 7:
+            document.write("<h1>Saturday</h1>");
+            break;
+    }
+</script>

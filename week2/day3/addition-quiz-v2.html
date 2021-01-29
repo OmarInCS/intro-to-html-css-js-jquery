@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Quiz</title>
+    <style>
+        .box {
+            margin: 8px auto;
+            width: 250px;
+            border: 1px solid lightgray;
+            padding: 8px;
+            box-shadow: 0px 0px 8px lightgray;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .box>h3 {
+            margin: 8px;
+        }
+
+        .box>img {
+            margin: 16px;
+        }
+
+        #question {
+            text-align: center;
+        }
+
+        #answer,
+        #message {
+            display: block;
+            margin: 8px auto;
+            text-align: center;
+            padding: 8px;
+        }
+
+        button {
+            box-sizing: border-box;
+            width: 50%;
+            border: 0px;
+            padding: 8px;
+            background-color: lightgreen;
+        }
+
+        button:hover {
+            background-color: lightsalmon;
+        }
+
+        #bt-check {
+            border-bottom-left-radius: 8px;
+        }
+
+        #bt-new {
+            border-bottom-right-radius: 8px;
+        }
+    </style>
+    <script src="addition-quiz-v2.js"></script>
+</head>
+
+<body onload="showQuestion();">
+    <div class="box">
+        <h3>Score: 0</h3>
+    </div>
+    <div class="box">
+        <h1 id="question">
+
+        </h1>
+        <input type="text" id="answer">
+        <p id="message"> </p>
+        <button id="bt-check" onclick="checkAnswer();">Check Answer</button><!--
+        --><button id="bt-new" onclick="showQuestion();">New Question</button>
+    </div>
+</body>
+
+</html>
