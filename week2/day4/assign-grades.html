@@ -1,0 +1,50 @@
+<script>
+    let n = parseInt(prompt("Enter num. of students:"));
+    let marks = [];
+    for (let i = 0; i < n; i++) {
+        let m = parseFloat(prompt("Enter student mark: "));
+        marks.push(m);
+    }
+
+    let best = Math.max(...marks);
+    
+    document.write(`<h1>The best mark: ${best}</h1>`);
+
+
+    for (let m of marks) {
+        if (m > best - 10) {
+            document.write(`<h1>mark: ${m} => Excellent</h1>`);
+        }
+        else if (m > best - 20) {
+            document.write(`<h1>mark: ${m} => V. Good</h1>`);
+        }
+        else if (m > best - 30) {
+            document.write(`<h1>mark: ${m} => Good</h1>`);
+        }
+        else if (m > best - 40) {
+            document.write(`<h1>mark: ${m} => Pass</h1>`);
+        }
+        else {
+            document.write(`<h1>mark: ${m} => Fail</h1>`);
+        }
+    }
+
+    // for (let i = 0; i < n; i++) {
+    //     if (marks[i] > best - 10) {
+    //         document.write(`<h1>mark: ${marks[i]} => Excellent</h1>`);
+    //     }
+    //     else if (marks[i] > best - 20) {
+    //         document.write(`<h1>mark: ${marks[i]} => V. Good</h1>`);
+    //     }
+    //     else if (marks[i] > best - 30) {
+    //         document.write(`<h1>mark: ${marks[i]} => Good</h1>`);
+    //     }
+    //     else if (marks[i] > best - 40) {
+    //         document.write(`<h1>mark: ${marks[i]} => Pass</h1>`);
+    //     }
+    //     else {
+    //         document.write(`<h1>mark: ${marks[i]} => Fail</h1>`);
+    //     }
+        
+    // }
+</script>

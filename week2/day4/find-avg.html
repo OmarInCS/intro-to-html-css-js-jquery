@@ -1,0 +1,16 @@
+<script>
+    let n = parseInt(prompt("Enter num. of students:"));
+    let marks = [];
+    for (let i = 0; i < n; i++) {
+        let m = parseFloat(prompt("Enter student mark: "));
+        marks.push(m);
+    }
+
+    let total = 0;
+    for (let m of marks) {
+        total += m;
+    }
+
+    let avg = total / n;
+    document.write(`<h1>The Average: ${avg}</h1>`);
+</script>
