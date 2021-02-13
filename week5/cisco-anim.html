@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISCO ANimation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 350px;
+            height: 300px;
+            border: 1px solid;
+            border-radius: 32px;
+            overflow: hidden;
+            margin: auto;
+            position: relative;
+            color: white;
+            padding: 16px;
+        }
+
+        .box img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -2;
+        }
+
+        .box span {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 16px;
+        }
+
+        .box-content {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding: 16px;  
+        }
+
+        .box-content p {
+            margin-bottom: -50px;
+            margin-left: -350px;
+            width: 350px;
+        }
+
+        .blue-bg {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0, 255, 0.5);
+            display: none;
+        }
+    </style>
+    <script src="../week4/day1/jquery-3.5.1.min.js"></script>
+    <script>
+        function bindEvents() {
+            $(".box").mouseenter(function() {
+                $(this).find(".blue-bg").fadeIn("fast");
+                $(this).find("img").animate({left: "-20px"}, "fast");
+                $(this).find(".box-content p").animate({marginBottom: "0px", marginLeft: "0px"}, "fast");
+            });
+
+            $(".box").mouseleave(function() {
+                $(this).find(".blue-bg").fadeOut("fast");
+                $(this).find("img").animate({left: "0px"}, "fast");
+                $(this).find(".box-content p").animate({marginBottom: "-50px", marginLeft: "-350px"}, "fast");
+            });
+        }
+    </script>
+</head>
+<body onload="bindEvents();">
+    <div class="box">
+        <img src="../images/podcast.jpg" alt="">
+        <div class="blue-bg"></div>
+        <span>Blog</span>
+        <div class="box-content">
+            <h1>Cisco Multi-Site Orchestrator</h1>
+            <p>Learn how it integrates with Cisco Data Center Network Manager and Nexus Dashboard.</p>
+        </div>
+    </div>
+</body>
+</html>

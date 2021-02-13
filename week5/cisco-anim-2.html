@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISCO ANimation 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .tile {
+            width: 33%;
+            overflow: hidden;
+            height: 532px;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .tile img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -2;
+        }
+
+        .tile-text {
+            position: absolute;
+            bottom: -100px;
+            padding: 16px;
+            width: 450px;
+            left: calc(50% - 225px);
+        }
+
+        .tile-text button {
+            background-color: lightskyblue;
+            padding: 8px;
+            border-radius: 32px;
+            border: none;
+            width: 150px;
+        }
+
+        .tile .shadow {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 532px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+        }
+
+    </style>
+    <script src="../week4/day1/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+
+            $(".tile").mouseenter(function () {
+                 $(".tile")
+                    .not(this)
+                    .find(".shadow")
+                    .fadeIn("fast");
+
+                $(this).find(".tile-text").animate({bottom: "16px"}, "fast");
+                let next = $(this).next(".tile");
+                let prev = $(this).prev(".tile")
+                
+                console.log(next);
+                console.log(prev);
+
+                if (next.length && prev.length) {
+                    next.animate({width: "20%"});
+                    prev.animate({width: "20%"});
+                }
+                else if(next.length) {
+                    next.animate({width: "7%"});
+                }
+                else if(prev.length) {
+                    prev.animate({width: "7%"});
+                }
+                
+                $(this).animate({width: "59%"});
+            });
+
+            
+            $(".tile").mouseleave(function () {
+                 $(".tile")
+                    .not(this)
+                    .find(".shadow")
+                    .fadeOut("fast");
+                
+                $(this).find(".tile-text").animate({bottom: "-100px"}, "fast");
+                $(this).next(".tile").animate({width: "33%"});
+                $(this).prev(".tile").animate({width: "33%"});
+                $(this).animate({width: "33%"});
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="row">
+        <div class="tile">
+            <img src="../images/workplace.webp" alt="">
+            <div class="shadow"></div>
+            <div class="tile-text">
+                <h1>Introducing Cisco Secure Application</h1>
+                <p>AppDynamics and Cisco unite application and security teams to defend digital businesses.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="tile">
+            <img src="../images/remote.webp" alt="">
+            <div class="shadow"></div>
+            <div class="tile-text">
+                <h1>Healthcare for all. That's the Inclusive Future.</h1>
+                <p>The bridge to possible is bringing healthcare to patients who need it most with Medibus.</p>
+                <button>Watch Video</button>
+            </div>
+        </div>
+        <div class="tile">
+            <img src="../images/trends-960x532.jpg" alt="">
+            <div class="shadow"></div>
+            <div class="tile-text">
+                <h1>2021 Global Networking Trends Report</h1>
+                <p>Connectivity and uptime are no longer enough. Read the first of five trends that can securely promote workplace safety.</p>
+                <button>Find out More</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
