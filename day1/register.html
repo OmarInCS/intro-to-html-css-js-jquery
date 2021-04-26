@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <style>
+            h1 {
+                background-color: lightblue;
+                text-align: center;
+            }
+
+            form {
+                background-color: lightcoral;
+                border: 3px solid black;
+                width: 500px;
+                margin: auto;
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            button {
+                width: 100%;
+                height: 35px;
+                margin-top: 8px;
+                color: blue;
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Register Form</h1>
+        <a href="abadnet.html">Home</a>
+        <hr>
+        <form action="">
+            First Name: <input type="text" required minlength="3"> <br>
+            Last Name: <input type="text" required minlength="3"> <br>
+            ID: <input type="text"> <br>
+            Mobile: <input type="tel" required pattern="05\d{8}" placeholder="05xxxxxxxx"> <br>
+            Email: <input type="email"> <br>
+            Age: <input type="number" min="15" max="60"> <br>
+            <div>Start Date: <input type="date"></div>
+            <div>Prefered Time: <input type="time"></div>
+            <div>
+                Gender: 
+                <input id="g-male" type="radio" name="gender"> <label for="g-male">Male</label>
+                <input id="g-female" type="radio" name="gender"> <label for="g-female">Female</label>
+            </div>
+            <div>
+                Course:
+                <select name="" id="">
+                    <option value="">Java</option>
+                    <option value="">C#</option>
+                    <option value="">SQL</option>
+                    <option value="">Network+</option>
+                </select>
+            </div>
+            <button>Register</button>
+        </form>
+    </body>
+</html>
