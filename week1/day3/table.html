@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Table</title>
+        <style>
+
+            table {
+                border-collapse: collapse;
+                border-top-left-radius: 16px;
+                border-top-right-radius: 16px;
+                overflow: hidden;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 600px;
+                text-align: center;
+            }
+
+            .header {
+                background-color: lightseagreen;
+                color: white;
+            }
+
+            th, td {
+                padding: 16px;
+            }
+
+            tr:nth-child(3) {
+                background-color: rgb(238, 232, 232);
+                color: lightseagreen;
+                border-top: 2px solid darkgray;
+                border-bottom: 2px solid darkgray;
+                font-weight: bold;
+            }
+
+            tr:last-child {
+                border-bottom: 3px solid lightseagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr class="header">
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Team</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Domenic</td>
+                <td>88,110</td>
+                <td>dcode</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sally</td>
+                <td>72,400</td>
+                <td>Students</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nick</td>
+                <td>52,300</td>
+                <td>dcode</td>
+            </tr>
+        </table>
+    </body>
+</html>
