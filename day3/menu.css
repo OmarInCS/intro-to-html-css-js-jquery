@@ -1,0 +1,68 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.outterbox {
+    width: 33.33%;
+    float: left;
+    /* border: 1px solid; */
+    padding: 16px;
+}
+
+.innerbox {
+    border: 2px solid;
+    padding: 16px;
+    background-color: lightskyblue;
+}
+
+.innerbox .title {
+    border: 2px solid;
+    float: right;
+    padding: 16px;
+    margin-top: -18px;
+    margin-right: -18px;
+}
+
+.innerbox p {
+    clear: right;
+}
+
+#chicken {
+    background-color: lightsalmon;
+}
+
+#suchi {
+    background-color: lightseagreen;
+}
+
+#beef {
+    background-color: lightsteelblue;
+}
+
+
+@media (max-width: 700px) {
+
+    .outterbox {
+        width: 100%;
+    }
+    
+}
+
+
+@media (min-width: 701px) and (max-width: 1000px) {
+
+    .outterbox {
+        width: 50%;
+    }
+
+    .outterbox:last-child {
+        width: 100%;
+    }
+    
+}
