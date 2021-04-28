@@ -1,0 +1,72 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(79, 6, 82);
+}
+
+.outter-box {
+    float: left;
+    width: 33.33%;
+    margin: 16px 0px;
+}
+
+.inner-box {
+    width: 90%;
+    height: 250px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0px 0px 8px rgb(46, 2, 48);
+    overflow: hidden;
+}
+
+.inner-box:hover {
+    box-shadow: 0px 0px 8px white;
+}
+
+#menu {
+    background-image: url(menu-tile.jpg);
+}
+
+#special {
+    background-image: url(specials-tile.jpg);
+}
+
+.inner-box > div {
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 150%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+section {
+    padding: 72px;
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .outter-box {
+        float: left;
+        width: 50%;
+    }
+
+    .outter-box:last-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 699px) {
+    .outter-box {
+        float: left;
+        width: 100%;
+    }
+}
