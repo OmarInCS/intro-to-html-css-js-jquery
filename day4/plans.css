@@ -1,0 +1,95 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 64px;
+}
+
+.outter-box {
+    float: left;
+    width: 25%;
+    /* border: 1px solid; */
+    padding: 8px;
+}
+
+.inner-box {
+    /* border: 1px solid; */
+    height: 600px;
+    border-radius: 16px;
+    /* overflow: hidden; */
+    position: relative;
+    top: 0px;
+    transition: top 0.5s;
+}
+
+.inner-box:hover {
+    top: -16px;
+}
+
+.inner-box > .top, .inner-box > .bottom {
+    /* border: 1px solid; */
+    padding: 8px;
+}
+
+.inner-box > .top {
+    height: 50%;
+    text-align: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.inner-box > .bottom {
+    height: 50%;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.inner-box > .top > h4 > span {
+    font-size: 2.5em;
+}
+
+.inner-box > .top > h4 {
+    clear: both;
+}
+
+.inner-box .badge {
+    float: right;
+    background-color: rgb(116, 113, 113);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+#free {
+    border: 2px solid;
+}
+
+.inner-box > .bottom {
+    box-shadow: 0px 0px 2px lightslategray;
+}
+
+#starter > .top {
+    background-color: rgb(221, 58, 58);
+    color: white;
+}
+
+#teams > .top {
+    background-color: rgb(238, 189, 29);
+    color: white;
+}
+
+#business > .top {
+    background-color: rgb(53, 53, 211);
+    color: white;
+}
+
+.inner-box ul {
+    list-style-type: '☑ ';
+    font-size: 1.2em;
+}
+
+
+
