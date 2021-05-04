@@ -1,0 +1,14 @@
+<script>
+    var day = parseInt(prompt("Enter a day number: "));
+
+    if (day >= 1 && day <= 5) {
+        document.write("<h1>Work-day</h1>");
+    }
+    else if (day === 6 || day === 7) {
+        document.write("<h1>Weekend</h1>");
+    }
+    else {
+        document.write("<h1>Invalid</h1>");
+    }
+
+</script>
