@@ -1,6 +1,6 @@
 
 var x, y;
-bmi = w / Math.pow(h / 100, 2)
+
 function showNewQuestion() {
     x = Math.round(Math.random() * 10);
     y = Math.round(Math.random() * 10);
