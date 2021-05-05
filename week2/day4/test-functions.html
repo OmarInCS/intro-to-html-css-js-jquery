@@ -1,0 +1,12 @@
+<script src="define-functions.js"></script>
+<script>
+    var mark = parseFloat(prompt("Enter a mark: "));
+    var fullMark = parseInt(prompt("Enter the full mark: "));
+
+    var pct = getPercentage(mark, fullMark);
+    var grade = getGrade(pct);
+
+    document.write("<h1>Percentage: ", pct, "</h1>");
+    document.write("<h1>Grade: ", grade, "</h1>");
+    
+</script>

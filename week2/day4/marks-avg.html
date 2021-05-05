@@ -1,0 +1,19 @@
+<script>
+    var n = parseInt(prompt("Enter the num. of std.: "));
+    var marks = [];
+
+    for (var i = 1; i <= n; i += 1) {
+        var m = parseInt(prompt("Enter a mark: "));
+        marks.push(m);
+    }
+
+    document.write(marks);
+
+    var total = 0;
+    for (var i = 0; i < n; i += 1) {
+        total += marks[i];
+    }
+
+    document.write("<h1> Average: ", total / n, "</h1>");
+
+</script>
