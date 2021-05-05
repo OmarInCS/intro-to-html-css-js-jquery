@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            display: flex;
+            flex-wrap: nowrap;
+            height: 600px;
+            position: relative;
+        }
+
+        .img {
+            background-image: url(../images/amazon/1.jpg);
+            width: 0%;
+        }
+
+        .img.current {
+            width: 100%;
+        }
+
+        .arrow {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.75);
+            font-size: 3em;
+            height: 100px;
+            padding: 16px;
+            top: calc(50% - 50px);
+            color: lightgray;
+
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+
+        #right-arrow {
+            right: 0px;
+            border-bottom-left-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+
+        
+        #right-arrow:hover {
+            box-shadow: -4px 0px 4px lightgray;
+        }
+
+        #left-arrow {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        
+        #left-arrow:hover {
+            box-shadow: 4px 0px 4px lightgray;
+        }
+
+        .slider:hover .arrow {
+            opacity: 1;
+        }
+
+    </style>
+    <script>
+        $(document).ready(() => {
+
+            var currentImg = 1;
+            var imgUrlTemplate = "url(../images/amazon/{{img}}.jpg)";
+
+            $("#left-arrow").click(() => {
+                var current = $(".img.current");
+                var first = $(".img").first();
+                var last = $(".img").last();
+
+                currentImg = currentImg != 1 ? currentImg - 1 : 5;
+                first.css({backgroundImage: imgUrlTemplate.replace("{{img}}", currentImg)});
+                
+                current.animate({width: "0%"}, "slow");
+                first.animate({width: "100%"}, "slow", () => {
+                    last.insertBefore(first);
+                    current.removeClass("current");
+                    first.addClass("current");
+                });
+
+            });
+
+            $("#right-arrow").click(() => {
+                var current = $(".img.current");
+                var first = $(".img").first();
+                var last = $(".img").last();
+
+                currentImg = currentImg != 5 ? currentImg + 1 : 1;
+                last.css({backgroundImage: imgUrlTemplate.replace("{{img}}", currentImg)});
+                
+                current.animate({width: "0%"}, "slow");
+                last.animate({width: "100%"}, "slow", () => {
+                    first.insertAfter(last);
+                    current.removeClass("current");
+                    last.addClass("current");
+                });
+
+                
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <section class="slider">
+        <div id="left-arrow" class="arrow">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <div class="img"></div>
+        <div class="img current"></div>
+        <div class="img"></div>
+
+        <div id="right-arrow" class="arrow">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Animation 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img-tile {
+            height: 532px;
+            width: 33%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            bottom: -150px;
+            left: calc(50% - 150px);
+            text-align: center;
+            color: white;
+            width: 300px;
+        }
+
+        .tile-shadow {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(() => {
+
+            $(".img-tile").mouseenter(function() {
+                $(this).find(".content").animate({bottom: "0px"});
+                $(".img-tile").not(this).find(".tile-shadow").fadeIn("fast");
+
+                var nextTile = $(this).next(".img-tile");
+                var prevTile = $(this).prev(".img-tile");
+
+                if (nextTile.length != 0 && prevTile.length != 0) { // middle tile
+                    nextTile.animate({width: "23%"});
+                    prevTile.animate({width: "23%"});
+                    $(this).animate({width: "53%"});
+                }
+                else if (nextTile.length != 0) { // first tile
+                    nextTile.animate({width: "13%"});
+                    prevTile.animate({width: "33%"});
+                    $(this).animate({width: "53%"});
+                }
+                else if (prevTile.length != 0) {    // last tile
+                    nextTile.animate({width: "33%"});
+                    prevTile.animate({width: "13%"});
+                    $(this).animate({width: "53%"});
+                }
+                
+            });
+        
+            $(".img-tile").mouseleave(function() {
+                $(this).find(".content").animate({bottom: "-150px"});
+                $(".img-tile").not(this).find(".tile-shadow").fadeOut("fast");
+
+                $(".img-tile").animate({width: "33%"});
+            });
+
+        });
+ 
+        
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="img-tile">
+            <img src="../images/workplace.webp" alt="">
+            <div class="tile-shadow"></div>
+            <div class="content">
+                <h2>Enable business resiliency</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolor magnam similique consequatur, officiis porro at quia ea blanditiis, quod temporibus optio libero dignissimos dolore nihil, id ab? Doloremque, officia?</p>
+                <button>Click Me</button>
+            </div>
+        </div>
+        <div class="img-tile">
+            <img src="../images/remote.webp" alt="">
+            <div class="tile-shadow"></div>
+            <div class="content">
+                <h2>Enable business resiliency</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolor magnam similique consequatur, officiis porro at quia ea blanditiis, quod temporibus optio libero dignissimos dolore nihil, id ab? Doloremque, officia?</p>
+                <button>Click Me</button>
+            </div>
+        </div>
+        <div class="img-tile">
+            <img src="../images/resiliency.jpg" alt="">
+            <div class="tile-shadow"></div>
+            <div class="content">
+                <h2>Enable business resiliency</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolor magnam similique consequatur, officiis porro at quia ea blanditiis, quod temporibus optio libero dignissimos dolore nihil, id ab? Doloremque, officia?</p>
+                <button>Click Me</button>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
