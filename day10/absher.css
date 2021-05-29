@@ -1,0 +1,128 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url(../images/absher/background.jpg);
+    background-position: center;
+    color: white;
+    height: 100%;
+    margin: 0px;
+}
+
+.outter-box {
+    /* border: 1px solid; */
+    float: left;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.middle-box {
+    /* border: 1px solid; */
+    width: 300px;
+    position: absolute;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#left-box > .middle-box {
+    animation-name: left-anim;
+    
+}
+
+#right-box > .middle-box {
+    animation-name: right-anim;
+}
+
+
+@keyframes left-anim {
+    from {right: 80%; opacity: 0;}
+    to {right: 5%; opacity: 1;}
+}
+
+@keyframes right-anim {
+    from {left: 80%; opacity: 0;}
+    to {left: 5%; opacity: 1;}
+}
+
+
+
+.inner-box {
+    background-color: rgba(255, 255, 255, 0.70);
+    width: 90%;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.inner-box h2 {
+    margin: 0px;
+    padding: 16px;
+}
+
+#left-box .inner-box h2 {
+    background-color: steelblue;
+}
+
+#right-box .inner-box h2 {
+    background-color: green;
+}
+
+.logo {
+    height: 200px;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.logo:hover {
+    transform: rotateY(180deg);
+}
+
+#left-box:hover .inner-box {
+    background-color: rgba(70, 131, 180, 0.60);
+}
+
+#right-box:hover .inner-box {
+    background-color: rgba(0, 128, 0, 0.20);
+}
+
+.logo-front, .logo-back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.logo-back {
+    transform: rotateY(180deg);
+}
+
+#left-box .logo-front {
+    background-image: url(../images/absher/business.png);
+}
+
+#left-box .logo-back {
+    background-image: url(../images/absher/business-hover.png);
+}
+
+#right-box .logo-front {
+    background-image: url(../images/absher/individual.png);
+}
+
+#right-box .logo-back {
+    background-image: url(../images/absher/individual-hover.png);
+}
