@@ -1,0 +1,85 @@
+<html>
+    0599888921
+    <head>
+        <title>Current Courses</title>
+        <style>
+            td, th {
+                border: 1px solid black;
+                color: blue;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 8px 20px;
+                text-align: center;
+            }
+
+            th {
+                background-color: darkblue;
+                color: white;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            table {
+                width: 75%;
+                margin: auto;
+            }
+
+            #popular-course {
+                background-color: lightcoral;
+            }
+
+            .new-course {
+                background-color: lightskyblue;
+            }
+
+            button {
+                
+                color: white;
+                padding: 16px;
+                border-radius: 8px;
+            }
+
+            .bt-details {
+                background-color: darkblue;
+            }
+
+            .bt-register {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Current Courses</h2>
+        <table style="border: 1px solid black;">
+            <tr>
+                <th>Course</th>
+                <th>Start Date</th>
+                <th>Course Time</th>
+                <th>Details</th>
+                <th>Register</th>
+            </tr>
+            <tr>
+                <td class="new-course">CCNA 200-301</td>
+                <td>26-Nov-21</td>
+                <td>6pm-8pm</td>
+                <td><button class="bt-details">details</button></td>
+                <td><button class="bt-register">register</button></td>
+            </tr>
+            <tr>
+                <td class="new-course">CCNP 203-601</td>
+                <td>26-Nov-21</td>
+                <td>6pm-8pm</td>
+                <td><button class="bt-details">details</button></td>
+                <td><button class="bt-register">register</button></td>
+            </tr>
+            <tr>
+                <td id="popular-course">Python</td>
+                <td>30-Nov-21</td>
+                <td>8pm-10pm</td>
+                <td><button class="bt-details">details</button></td>
+                <td><button class="bt-register">register</button></td>
+            </tr>
+        </table>
+    </body>
+</html>

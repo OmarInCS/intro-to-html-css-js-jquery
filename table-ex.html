@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Table Ex.</title>
+        <style>
+            table {
+                width: 75%;
+                margin: auto;
+                border-bottom: 2px solid green;
+                margin-top: 64px;
+                border-spacing: 0px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 20px;
+            }
+
+            th, td {
+                padding: 16px;
+                /* border-radius: 16px; */
+            }
+
+            th {
+                background-color: green;
+                color: white;
+            }
+
+            #tb-start {
+                border-top-left-radius: 16px;
+            }
+
+            #tb-end {
+                border-top-right-radius: 16px;
+            }
+
+            .row2 > td {
+                background-color: rgb(233, 231, 231);
+                color: green;
+                border-top: 2px solid lightgray;
+                border-bottom: 2px solid lightgray;
+            }
+
+            .row2 i {
+                color: red;
+            }
+
+            tr:nth-child(odd) {
+                background-color: lightgreen;
+            }
+
+            td:hover {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th id="tb-start">Rank</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th id="tb-end">Team</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Domenic</td>
+                <td>88,110</td>
+                <td>dcode</td>
+            </tr>
+            <tr class="row2">
+                <td>2 <i>two</i></td>
+                <td>Sally</td>
+                <td>72,110</td>
+                <td>Studentsd</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nick</td>
+                <td>97,110</td>
+                <td>dcode</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Adidas</td>
+                <td>87,110</td>
+                <td>dcode</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Register Course</title>
+        <style>
+            div {
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Register Course</h2>
+        <form action="">
+            <div>
+                Full Name:
+                <input type="text" minlength="3" required placeholder="Full Name">
+            </div>
+            <div>
+                Mobile:
+                <input type="tel" minlength="10" maxlength="10" required>
+            </div>
+            <div>
+                Email:
+                <input type="text">
+            </div>
+            <div>
+                Date of Birth:
+                <input type="date">
+            </div>
+            <div>
+                Password:
+                <input type="password">
+            </div>
+            <div>
+                Gender:
+                <input id="g-male" type="radio" name="gender"> <label for="g-male">Male</label>
+                <input id="g-female" type="radio" name="gender"> <label for="g-female">Female</label>
+            </div>
+            <div>
+                Courses:
+                <input id="Java" type="checkbox" name="gender"> <label for="Java">Java</label>
+                <input id="Python" type="checkbox" name="gender"> <label for="Python">Python</label>
+                <input id="C" type="checkbox" name="gender"> <label for="C">C#</label>
+                <input id="SQL" type="checkbox" name="gender"> <label for="SQL">SQL</label>
+            </div>
+            <div>
+                Courses:
+                <select name="" id="">
+                    <option value="">Java</option>
+                    <option value="">Python</option>
+                    <option value="">C#</option>
+                    <option value="">SQL</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </body>
+</html>
