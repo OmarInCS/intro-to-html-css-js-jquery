@@ -1,0 +1,51 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.img-title {
+    position: relative;
+}
+
+.box-title {
+    position: absolute;
+    top: 0px;
+    left: 120px;
+}
+
+.hidden-box {
+    /* border: 1px solid black; */
+    float: left;
+    height: 400px;
+    padding: 16px;
+}
+
+.hidden-box.tall {
+    float: right;
+    width: 25%;
+    height: 800px;
+}
+
+
+.hidden-box.wide {
+    width: 50%;
+}
+
+
+.hidden-box.small {
+    width: 25%;
+}
+
+.box {
+    /* border: 1px solid black; */
+    height: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: lightblue;
+}
