@@ -1,0 +1,10 @@
+<script src="my-functions.js"></script>
+<script>
+    var m = parseFloat(prompt("Enter a mark: "));
+    var fm = parseFloat(prompt("Enter exam full mark: "));
+
+    var pct = getPCT(m, fm);
+    var grade = getGrade(pct);
+
+    document.write(`<h1>${grade}, ${pct}%</h1>`);
+</script>
