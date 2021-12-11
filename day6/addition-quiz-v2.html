@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="addition-quiz-v2.css">
 <script src="addition-quiz-v2.js"></script>
 
-<body>
+<body onload="preprocess();">
     <div class="box">
         <h3 id="score">Score: 0</h3>
     </div>
@@ -16,8 +16,8 @@
             </h1>
             <input type="text" id="answer">
             <p id="message"> </p>
-            <button id="bt-new" >Play Again</button><!--
-            --><button id="bt-check" >Check Answer</button>
+            <button id="bt-new" onclick="playAgain();" >Play Again</button><!--
+            --><button id="bt-check" onclick="checkAnswer();" >Check Answer</button>
         
         </div>
         <div class="box hidden">
@@ -28,7 +28,7 @@
             <div id="history">
                 
             </div>
-            <button id="bt-clear">Clear</button>
+            <button id="bt-clear" onclick="clearHistory();">Clear</button>
         </div>
     </main>
 </body>
