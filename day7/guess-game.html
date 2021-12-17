@@ -9,13 +9,13 @@
     <script src="guess-game.js"></script>
     <link rel="stylesheet" href="guess-game.css">
 </head>
-<body>
+<body onload="loadWords();">
     
     <div id="box">
         <h1>Guess The Word</h1>
         <img id="face-img" src="think.png" alt="">
         <div id="word">
-            
+
         </div>
         <button id="bt-check" onclick="checkAnswer();">Check</button>
         <button id="bt-again" onclick="playAgain();">Play Again</button>
