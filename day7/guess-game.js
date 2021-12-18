@@ -19,7 +19,7 @@ function selectRandomWord() {
     selectedIndex = Math.floor(Math.random() * words.length);
     selectedWord = words[selectedIndex];
     selectedWord = Array.from(selectedWord);
-    // console.log(selectedWord);
+    console.log(selectedWord);
 
     var idx1 = Math.floor(Math.random() * selectedWord.length);
     var idx2 = Math.floor(Math.random() * selectedWord.length);
@@ -50,6 +50,7 @@ function showLetterBoxs() {
 function checkAnswer() {
     var boxList = document.querySelectorAll(".letter-box");
     var correctWord = words[selectedIndex];
+    var inputWord = "";
 
     for (var i = 0; i < boxList.length; i++) {
         var boxLetter = boxList[i].value;
@@ -58,5 +59,17 @@ function checkAnswer() {
             boxList[i].classList.replace("wrong", "correct");
             boxList[i].disabled = true;
         }
+        inputWord += boxLetter;
     }
+
+    if (inputWord === correctWord) {
+        document.getElementById("face-img").src = "happy.png";
+    }
+}
+
+function playAgain() {
+    selectRandomWord();
+    showLetterBoxs();
+    document.getElementById("face-img").src = "think.png";
+
 }

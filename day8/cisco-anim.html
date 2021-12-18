@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISCO Animation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img-box {
+            height: 532px;
+            width: 33%;
+            /* border: 1px solid black; */
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-box .content {
+            color: white;
+            text-align: center;
+            width: 420px;
+            position: absolute;
+            bottom: -85px;
+            left: calc(50% - 210px);
+        }
+
+        .img-box .img-shadow {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: none;
+        }
+
+        #img-left {
+            background-image: url(../images/remote.webp);
+        }
+
+        #img-middle {
+            background-image: url(../images/workplace.webp);
+        }
+        
+        #img-right {
+            background-image: url(../images/resiliency.jpg);
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $(".img-box").mouseenter(function () {
+               $(this).find(".content").animate({bottom: "8px"}, "slow");
+               $(".img-box").not(this).find(".img-shadow").fadeIn("slow");
+
+               var nextBox = $(this).next(".img-box");
+               var prevBox = $(this).prev(".img-box");
+
+               if (nextBox.length != 0 && prevBox.length != 0) { // middle-box
+                    nextBox.animate({width: "23%"}, "fast");
+                    prevBox.animate({width: "23%"}, "fast");
+                    $(this).animate({width: "53%"}, "fast");
+               }
+               else if (nextBox.length != 0) { // left-box
+                    nextBox.animate({width: "13%"}, "fast");
+                    $(this).animate({width: "53%"}, "fast");
+               }
+               else { // right-box
+                    prevBox.animate({width: "13%"}, "fast");
+                    $(this).animate({width: "53%"}, "fast");
+               }
+            });
+
+            $(".img-box").mouseleave(function () {
+               $(this).find(".content").animate({bottom: "-85px"}, "slow");
+               $(".img-box").not(this).find(".img-shadow").fadeOut("slow");
+               $(".img-box").animate({width: "33%"}, "fast");
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="img-box" id="img-left">
+            <div class="img-shadow"></div>
+            <div class="content">
+                <h2>The rise of NaaS</h2>
+                <p>Network as a service (NaaS) is here. Get the latest on this emerging trend that has big implications for the future.</p>
+                <button>Read The Report</button>
+            </div>
+        </div>
+        <div class="img-box" id="img-middle">
+            <div class="img-shadow"></div>
+            <div class="content">
+                <h2>2021 Cisco Purpose Report</h2>
+                <p>Cisco's purpose is to Power an Inclusive Future for All. See the progress we are making in our 2021 Cisco Purpose Report.</p>
+                <button>Read The Report</button>
+            </div>
+        </div>
+        <div class="img-box" id="img-right">
+            <div class="img-shadow"></div>
+            <div class="content">
+                <h2>Experts weigh in on Apache Log4j vulnerability</h2>
+                <p>Cisco Secure and Talos experts discuss CVE-2021-44228 and steps for mitigating the vulnerability.</p>
+                <button>Read The Report</button>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
