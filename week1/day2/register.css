@@ -1,0 +1,37 @@
+
+body {
+    background-color: black;
+    color: white;
+}
+
+form {
+    /* border: 2px solid blue; */
+    padding: 16px;
+    margin: 16px auto;
+    width: 600px;
+    border-radius: 16px;
+    background-color: darkgray;
+    /* text-align: center; */
+}
+
+
+textarea {
+    width: 100%;
+}
+
+div {
+    display: inline-block;
+    width: 49%;
+}
+
+.button {
+    width: 100px;
+    padding: 8px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 8px;
+}
+
+#bt-submit {
+    background-color: lightgreen;
+}

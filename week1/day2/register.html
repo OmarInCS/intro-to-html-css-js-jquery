@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Register in Course</title>
+        <link rel="stylesheet" href="register.css">
+    </head>
+    <body>
+        <h1>Register Form</h1>
+        <form action="">
+            <div>
+                <label for="">Student Name:</label> 
+                <input type="text" minlength="3" required>
+            </div>
+            <div>
+                <label for="">Mobile Number:</label> 
+                <input type="tel" required pattern="\d{10}">
+            </div>
+            <div>
+                <label for="">Email:</label> 
+                <input type="email" pattern="\w+@gmail.com">
+            </div>
+            <div>
+                <label for="">Date of Birth:</label> 
+                <input type="date">
+            </div>
+            <div>
+                <label for="">Interested in:</label>
+                <input type="checkbox" id="ch1"> <label for="ch1">Programming</label>
+                <input type="checkbox" id="ch2"> <label for="ch2">Network</label>
+                <input type="checkbox" id="ch3"> <label for="ch3">Security</label>
+            </div>
+            <div>
+                <label for="">Gender:</label>
+                <input type="radio" id="rd1" name="gender"> <label for="rd1">Male</label>
+                <input type="radio" id="rd2" name="gender"> <label for="rd2">Female</label>
+            </div>
+            <div>
+                <label for="">Courses:</label>
+                <select name="" id="">
+                    <option value="">Java</option>
+                    <option value="">Python</option>
+                    <option value="">SQL</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Description:</label>
+                <textarea name="" id="" cols="120" rows="5"></textarea>
+            </div>
+            <ol>
+                <li>Error 1</li>
+                <li>Note 1</li>
+                <li>Note 2</li>
+            </ol>
+            <input class="button" type="button" value="Clear">
+            <input class="button" id="bt-submit" type="submit" value="Save">
+            <!-- 0599888921 -->
+        </form>
+    </body>
+</html>
