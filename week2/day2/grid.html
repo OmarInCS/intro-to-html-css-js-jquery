@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Grid Elements</title>
+  <style>
+
+   * {
+    box-sizing: border-box;
+   }
+
+    div {
+      background-color: #00FFFF;
+      height: 600px;
+      display: grid;
+      grid-template-rows: repeat(4, 100px);
+      grid-template-columns: repeat(2, 100px);
+      justify-content: center;
+      align-content: center;
+      /* grid-auto-flow: column; */
+      /* justify-items: center;
+      align-items: center; */
+    }
+
+    p {
+      /* width: 50px;
+      height: 50px; */
+      border: 1px solid black;
+      margin: 0px;
+    }
+
+    #p1 {
+      background-color: #A52A2A;
+      grid-column-start: span 2;
+      grid-row-start: span 2;
+    }
+
+    #p2 {
+      background-color: #DEB887;
+      
+    }
+
+    #p3 {
+      background-color: #5F9EA0;
+    }
+
+    #p4 {
+      background-color: #FF7F50;
+    }
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <h1>Grid Elements</h1>
+
+  <div>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+  </div>
+</body>
+</html>

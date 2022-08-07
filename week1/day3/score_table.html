@@ -1,0 +1,115 @@
+<html>
+    <head>
+
+        <style>
+
+            #myspan {
+                color: blue;
+            }
+
+            thead {
+                background-color: darkcyan;
+                color: white;
+            }
+
+            table {
+                margin: auto;
+                border-spacing: 0px;
+                border-bottom: 4px solid darkcyan;
+                border-top-left-radius: 16px;
+                border-top-right-radius: 16px;
+                overflow: hidden;
+            }
+
+            th, td {
+                padding: 16px;
+            }
+
+            /* .bg-gray {
+                background-color: rgb(237, 235, 235);
+            } */
+
+            tbody > tr:nth-child(odd) {
+                background-color: rgb(237, 235, 235);
+            }
+
+            .bg-gray > td {
+                border-bottom: 2px solid rgb(125, 124, 124);
+                border-top: 2px solid rgb(125, 124, 124);
+            }
+
+            .bg-gray > td > span {
+                color: red;
+            }
+
+            /* .bg-gray span {
+                color: red;
+            } */
+
+            td:hover {
+                background-color: lightpink;
+            }
+
+            .bg-gray > td:hover {
+                background-color: lightgreen;
+            }
+
+            .bg-gray span {
+                color: greenyellow;
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Points</th>  
+                    <th>Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Domenic</td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                </tr>
+                <tr class="bg-gray">
+                    <td>2</td>
+                    <td>Sally <span id="myspan" style="color: coral;">new</span></td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Nic</td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                </tr>
+                <tr class="bg-gray">
+                    <td>1</td>
+                    <td>Domenic</td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sally <span>new</span></td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                </tr>
+                <tr class="bg-gray">
+                    <td>3</td>
+                    <td>Nic</td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

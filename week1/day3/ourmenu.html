@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Our Menu</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-evenly;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .box {
+                border: 2px solid black;
+                width: 30%;
+                padding: 16px;
+                background-color: lightblue;
+                position: relative;
+                padding-top: 64px;
+            }
+
+            .box > span {
+                border: 2px solid black;
+                font-size: 1.5em;
+                font-weight: bold;
+                position: absolute;
+                right: -2px;
+                top: -2px;
+                padding: 8px;
+                width: 150px;
+                text-align: center;
+            }
+
+            #chicken {
+                background-color: lightcoral;
+            }
+
+            #beef {
+                background-color: lightcyan;
+            }
+
+            #sushi {
+                background-color: lightgreen;
+            }
+
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Our Menu</h1>
+        <div class="container">
+            <div class="box">
+                <span id="chicken">Chicken</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum quibusdam, soluta iusto, enim nobis voluptas in vitae, nam facere neque ipsum saepe eveniet! Laborum quos maxime temporibus perspiciatis magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ex itaque consequuntur reiciendis ea doloremque iste porro nam, enim, maiores animi aspernatur, natus vitae quisquam quam modi distinctio! Vero, obcaecati.</p>
+            </div>
+            <div class="box">
+                <span id="beef">Beef</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum quibusdam, soluta iusto, enim nobis voluptas in vitae, nam facere neque ipsum saepe eveniet! Laborum quos maxime temporibus perspiciatis magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ex itaque consequuntur reiciendis ea doloremque iste porro nam, enim, maiores animi aspernatur, natus vitae quisquam quam modi distinctio! Vero, obcaecati.</p>
+            </div>
+            <div class="box">
+                <span id="sushi">Sushi</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum quibusdam, soluta iusto, enim nobis voluptas in vitae, nam facere neque ipsum saepe eveniet! Laborum quos maxime temporibus perspiciatis magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ex itaque consequuntur reiciendis ea doloremque iste porro nam, enim, maiores animi aspernatur, natus vitae quisquam quam modi distinctio! Vero, obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis inventore deleniti sunt harum sapiente porro quasi consequuntur a, explicabo dolores temporibus placeat quos distinctio voluptatibus fugit soluta, esse necessitatibus ex.</p>
+            </div>
+            
+        </div>
+    </body>
+</html>
