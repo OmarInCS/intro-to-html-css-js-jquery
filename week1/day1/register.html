@@ -1,0 +1,75 @@
+<!-- 05 99 888 921 -->
+<!-- Block Level Elements => h1, p, div, li, ul -->
+<!-- Inline Elements => img, a, input -->
+<html>
+    <head>
+        <title>Register in Course</title>
+        <style>
+            form {
+                background-color: lightblue;
+                color: brown;
+                width: 500px;
+                margin: auto;
+                border: 2px solid black;
+                padding: 16px 32px;
+            }
+
+            /* a {
+                margin: auto;
+            } */
+
+            /* body {
+                text-align: center;
+            } */
+
+            #link {
+                text-align: center;
+            }
+
+            input, textarea {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Register to Course</h1>
+        <div id="link">
+            <a href="abadnet.html">
+                Home Page
+            </a>
+        </div>
+        <form action="">
+            <div>
+                Student Name*:
+                <input type="text" required minlength="2">
+            </div>
+            <div>
+                Email:
+                <input type="text">
+            </div>
+            <div>
+                Date of Birth:
+                <input type="date">
+            </div>
+            <div>
+                Photo:
+                <input type="file">
+            </div>
+            <div>
+                Course Name:
+                <input type="text" list="courses-list">
+                <datalist id="courses-list">
+                    <option value="">Java</option>
+                    <option value="">Javascript</option>
+                    <option value="">C#</option>
+                    <option value="">HTML</option>
+                </datalist>
+            </div>
+            <div>
+                Description:
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <input type="submit">
+        </form>
+    </body>
+</html>
