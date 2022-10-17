@@ -1,0 +1,46 @@
+
+.user-info > img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-info h3, .user-info h6 {
+    margin: 2px;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: repeat(2, 400px);
+    grid-template-columns: repeat(4, auto);
+    gap: 16px;
+}
+
+#container > .box:nth-child(1) {
+    grid-column-start: span 2;
+}
+
+#container > .box:nth-child(3) {
+    grid-row-start: span 2;
+}
+
+#container > .box:nth-child(5) {
+    grid-column-start: span 2;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 16px;
+    border-radius: 16px;
+
+    background-image: url(../../images/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: right;
+}

@@ -1,0 +1,84 @@
+
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+hr {
+    border-top: 3px solid goldenrod;
+    width: 100px;
+}
+
+#btn-lst > button {
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border-color: goldenrod;
+    cursor: pointer;
+}
+
+#btn-lst > button:hover {
+    background-color: goldenrod;
+    color: white;
+}
+
+#btn-lst {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 200px auto 200px auto;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 32px;
+    column-gap: 16px;
+}
+
+.img {
+    border: 2px solid goldenrod;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 16px;
+}
+
+#img1 {
+    background-image: url(../../images/item-1.jpeg);
+}
+
+#img2 {
+    background-image: url(../../images/item-2.jpeg);
+}
+
+#img3 {
+    background-image: url(../../images/item-3.jpeg);
+}
+
+#img4 {
+    background-image: url(../../images/item-4.jpeg);
+}
+
+.details > h2 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted gray;
+    padding-bottom: 8px;
+    margin-top: 0px;
+}
+
+.details > h2 > span:nth-child(2) {
+    color: goldenrod;
+}
+
+.details > p {
+    color: gray;
+}
