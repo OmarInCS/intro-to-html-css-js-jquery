@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    font-weight: 300;
+    text-align: center;
+}
+
+#login-box {
+    background-color: white;
+    padding: 64px 32px;
+    width: 400px;
+    border-radius: 16px;
+}
+
+#buttons-row {
+    display: grid;
+    grid-template-columns: auto repeat(2, 50px);
+    height: 75px;
+    gap: 8px;
+}
+
+#buttons-row > button {
+    font-size: 1.2em;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+#buttons-row > button:nth-child(2), #buttons-row > button:nth-child(3) {
+    color: rgb(32, 32, 185);
+}
+
+.box-row {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+#separator-row {
+    position: relative;
+}
+
+#separator-row > span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 8px;
+}
+
+#separator-row > hr {
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+
+input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 16px 8px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+}
+
+.box-row .bi-eye-fill{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#forgot-row {
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: rgb(51, 129, 103);
+    text-decoration: none;
+}
+
+#login-box > button {
+    width: 100%;
+    background-color: rgb(51, 129, 103);
+    border-radius: 8px;
+    padding: 16px;
+    color: white;
+    border: none;
+}
+
+#login-box > div:last-child {
+    text-align: center;
+}
