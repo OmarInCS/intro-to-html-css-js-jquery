@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Demo</title>
+</head>
+<body>
+    <label for="">Enter your name:</label>
+    <input id="npt-name" type="text">
+    <label for="">Enter your salary:</label>
+    <input id="npt-salary" type="text">
+    <button onclick="calcAnnualSalary()">Calculate</button>
+    <h1 id="result">
+
+    </h1>
+
+
+    <script>
+        function calcAnnualSalary() {
+            var salary = document.getElementById("npt-salary").value;
+            var name = document.getElementById("npt-name").value;
+            var annualSalary = salary * 12;
+            document.getElementById("result").innerHTML = `Annual Salary of ${name} is ${annualSalary} SAR`;
+            // document.write("<h1> Annual salary of " + name + " is " + annualSalary + " SAR</h1>");
+            // document.write(`<h1>Annual Salary of ${name} is ${annualSalary} SAR</h1>`);
+            // console.log(`<h1>Annual Salary of ${name} is ${annualSalary} SAR</h1>`);
+            // document.write("<h1>annualSalary</h1>");
+        }
+    </script>
+    
+</body>
+</html>

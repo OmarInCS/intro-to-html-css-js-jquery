@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Keyframes</title>
+  <style>
+
+    div {
+      background-color: #00FFFF;
+      height: 400px;
+    }
+
+    p {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      margin: 0px;
+      box-sizing: border-box;
+
+      position: relative;
+
+      animation-name: change;
+      animation-duration: 6s;
+      animation-fill-mode: forwards;
+    }
+
+    #p1 {
+      background-color: #A52A2A;
+      
+      /* animation-iteration-count: infinite; */
+    }
+
+    #p2 {
+      background-color: #DEB887;
+      animation-delay: 2s;
+    }
+
+    #p3 {
+      background-color: #5F9EA0;
+      animation-delay: 4s;
+    }
+
+    #p4 {
+      background-color: #FF7F50;
+      animation-delay: 6s;
+    }
+
+
+    @keyframes change {
+      0% {
+        background-color: #A52A2A;
+        left: 0px;
+      }
+
+      50% {
+        background-color: blue;
+        left: 64px;
+      }
+
+      100% {
+        background-color: #A52A2A;
+        left: 0px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>CSS Keyframes</h1>
+
+  <div>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    
+  </div>
+</body>
+</html>

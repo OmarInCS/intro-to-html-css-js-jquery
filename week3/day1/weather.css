@@ -1,0 +1,88 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 16px;
+}
+
+.container .img-radio {
+    display: none;
+}
+
+.container #img1 {
+    background-image: url(../../images/item-1.jpeg);
+}
+
+.container #img2 {
+    background-image: url(../../images/item-2.jpeg);
+}
+
+.container #img3 {
+    background-image: url(../../images/item-3.jpeg);
+}
+
+.container #img4 {
+    background-image: url(../../images/item-4.jpeg);
+}
+
+.container #img5 {
+    background-image: url(../../images/item-1.jpeg);
+}
+
+
+.container .img {
+    position: relative;
+    width: 64px;
+    overflow: hidden;
+    border-radius: 32px;
+
+    transition: width 1s;
+}
+
+
+.container .content {
+    position: absolute;
+    bottom: 16px;
+    left: 8px;
+
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.container .content i {
+    font-size: 200%;
+}
+
+.container .content .icon {
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.container .content h2 > div {
+    white-space: nowrap;
+}
+
+.container .content h2 {
+    margin: 0px;
+}
+
+.container .img-radio:checked + .img {
+    width: 500px;
+}
+
+
+/* .drobmenu {
+    display: none;
+    background-color: white;
+}
+
+.container .img-radio:checked + .img .drobmenu {
+    display: block;
+} */
