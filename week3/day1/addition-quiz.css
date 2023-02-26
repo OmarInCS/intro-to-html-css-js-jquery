@@ -1,0 +1,50 @@
+
+.box {
+    margin: 8px auto;
+    width: 250px;
+    border: 1px solid lightgray;
+    padding: 8px;
+    box-shadow: 0px 0px 8px lightgray;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.box > h3 {
+    margin: 8px;
+}
+
+.box > img {
+    margin: 16px;
+}
+
+#question {
+    text-align: center;
+}
+
+#answer, #message {
+    display: block;
+    margin: 8px auto;
+    text-align: center;
+    padding: 8px;
+}
+
+button {
+    box-sizing: border-box;
+    width: 50%;
+    border: 0px;
+    padding: 8px;
+    background-color: lightgreen;
+}
+
+button:hover {
+    background-color: lightsalmon;
+}
+
+#bt-check {
+    border-bottom-left-radius: 8px;
+}
+
+#bt-new {
+    border-bottom-right-radius: 8px;
+}
+

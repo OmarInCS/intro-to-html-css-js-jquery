@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Amazon Slider</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            height: 600px;
+
+            position: relative;
+        }
+
+        .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .img.middle {
+            background-image: url(../../images/amazon/1.jpg);
+            width: 100%;
+            
+        }
+
+        .arrow {
+            position: absolute;
+            font-size: 50px;
+            top: 0px;
+            bottom: 0px;
+            color: lightgray;
+            padding: 16px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow > * {
+            display: none;
+        }
+
+        .arrow:hover > * {
+            display: initial;
+            cursor: pointer;
+        }
+
+        #left-arrow {
+            left: 0px;
+        }
+
+        #right-arrow {
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div id="left-arrow" class="arrow">
+            <i class="bi bi-caret-left"></i>
+        </div>
+
+        <div class="img "></div>
+        <div class="img middle"></div>
+        <div class="img "></div>
+
+
+        <div id="right-arrow" class="arrow">
+            <i class="bi bi-caret-right"></i>
+        </div>
+    </header>
+
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <script>
+
+        var currentImg = 1;
+
+        $("#right-arrow").click(() => {
+
+            var middle = $(".img.middle");
+            var left = middle.prev();
+            var right = middle.next();
+
+            currentImg = currentImg != 5 ? ++currentImg : 1;
+            var imgUrl = `url(../../images/amazon/${currentImg}.jpg)`;
+            right.css({backgroundImage: imgUrl});
+
+            middle.animate({width: "0%"});
+            right.animate({width: "100%"});
+
+            right.addClass("middle");
+            middle.removeClass("middle");
+            left.insertAfter(right);
+        });
+
+        $("#left-arrow").click(() => {
+            
+            var middle = $(".img.middle");
+            var left = middle.prev();
+            var right = middle.next();
+
+            currentImg = currentImg != 1 ? --currentImg : 5;
+            var imgUrl = `url(../../images/amazon/${currentImg}.jpg)`;
+            left.css({backgroundImage: imgUrl});
+
+            middle.animate({width: "0%"});
+            left.animate({width: "100%"});
+
+            middle.removeClass("middle");
+            left.addClass("middle");
+            right.insertBefore(left);
+        });
+    </script>
+</body>
+</html>

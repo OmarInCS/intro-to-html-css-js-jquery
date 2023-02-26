@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISCO Animation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #img-left {
+            background-image: url(../../images/remote.webp);
+        }
+
+        #img-middle {
+            background-image: url(../../images/resiliency.jpg);
+        }
+
+        #img-right {
+            background-image: url(../../images/workplace.webp);
+        }
+
+        .img-box {
+            height: 532px;
+            width: 33%;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img-shadow {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 75%;
+            display: none;
+        }
+
+        .content {
+            position: absolute;
+            height: 170px;
+            width: 270px;
+            bottom: -100px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="img-box" id="img-left">
+            <div class="img-shadow"></div>
+            <div class="content">
+                <h2>The Image Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe qui eaque est, labore voluptates </p>
+                <button>Read More</button>
+            </div>
+        </div>
+        <div class="img-box" id="img-middle">
+            <div class="img-shadow"></div>
+            <div class="content">
+                <h2>The Image Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe qui eaque est, labore voluptates cum necessitatibus nihil </p>
+                <button>Read More</button>
+            </div>
+        </div>
+        <div class="img-box" id="img-right">
+            <div class="img-shadow"></div>
+            <div class="content">
+                <h2>The Image Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe qui eaque est, </p>
+                <button>Read More</button>
+            </div>
+        </div>
+    </nav>
+
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(".img-box").mouseenter(function() {
+
+            $("*").finish();
+
+            $(".img-box").not(this).find(".img-shadow").fadeIn();
+            $(this).find(".content").animate({bottom: "0px"});
+            
+            var nextBox = $(this).next(".img-box");
+            var prevBox = $(this).prev(".img-box");
+
+            $(this).animate({width: "53%"});
+            if (nextBox.length != 0 && prevBox.length != 0) { 
+                // middle box
+                nextBox.animate({width: "23%"});
+                prevBox.animate({width: "23%"});
+            }
+            else if (nextBox.length == 0) {
+                // last box
+                prevBox.animate({width: "13%"});
+            }
+            else {
+                // first box
+                nextBox.animate({width: "13%"});
+            }
+        });
+
+        $(".img-box").mouseleave(function() {
+
+            $("*").finish();
+
+            $(".img-box").not(this).find(".img-shadow").fadeOut();
+            $(this).find(".content").animate({bottom: "-100px"});
+            $(".img-box").animate({width: "33%"});
+            
+        });
+
+
+    </script>
+</body>
+</html>
